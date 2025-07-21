@@ -132,7 +132,12 @@ function iniciarApp() {
         btnFavorito.classList.add('btn', 'btn-danger', 'col');
         btnFavorito.textContent = 'Guardar Favorito';
 
-        btnFavorito.onclick = function () { //localStorage
+        btnFavorito.onclick = function () { //agg localStorage
+
+            if (existeStorage(idMeal)) {
+                return;
+            }
+
             agregarFavoritos({
                 id: idMeal,
                 titulo: strMeal,
@@ -156,6 +161,11 @@ function iniciarApp() {
     function agregarFavoritos(receta) {
         const Favorito = JSON.parse(localStorage.getItem('favoritos')) ?? [];
         localStorage.setItem('favoritos', JSON.stringify([...Favorito, receta]))
+    }
+
+    function existeStorage(id) {
+        const Favoritos = JSON.parse(localStorage.getItem('favoritos')) ?? [];
+        return Favoritos.some(favorito => favorito.id === id);
     }
 
     function limpiarHTML(selector) {
