@@ -44,3 +44,5 @@ FoodFinder/
 ---
 
 ¡Disfruta usando FoodFinder! Si tienes sugerencias o encuentras algún error, no dudes en abrir un issue o contribuir al proyecto. 
+
+<img width="1920" height="4003" alt="CapturePage(1)" src="https://github.com/user-attachments/assets/c3a5f346-735c-421d-a58d-f7c946598a8d" />
